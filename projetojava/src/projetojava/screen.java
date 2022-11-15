@@ -77,8 +77,7 @@ public class screen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 TelaLogin login = new TelaLogin();
                 contentPane.add(login);
-                login.setVisible(true);
-                System.out.println(login.isVisible());
+                login.setVisible(true);               
             }
         });
         mntmNewMenuItem.setIcon(new ImageIcon(screen.class.getResource("/icons/user.png")));
