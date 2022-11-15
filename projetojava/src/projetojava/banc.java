@@ -45,5 +45,13 @@ public class banc {
             return false;
         }
     }
+    public Boolean igual(String a, String b) {
+        if (a.equals(b)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 
 }
