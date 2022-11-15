@@ -118,7 +118,7 @@ public class TelaCadastro extends JInternalFrame {
 
             public void actionPerformed(ActionEvent e) {
                 banc banco = new banc();
-                if (igual(new String(cadSenha.getPassword()), new String(cadSenha2.getPassword()))) {
+                if (banco.igual(new String(cadSenha.getPassword()), new String(cadSenha2.getPassword()))) {
                     if (banco.existe(cadUser.getText()) == false) {
                         banc.addUser(cadUser.getText());
                         banc.addSenha(new String(cadSenha.getPassword()));
@@ -127,20 +127,11 @@ public class TelaCadastro extends JInternalFrame {
                     } else {
                         JOptionPane.showMessageDialog(null, "Usuário: " + cadUser.getText() + " Já existe");
                     }
-
-
                 } else {
                     JOptionPane.showMessageDialog(null, "As senhas não são iguais!");
                 }
             }
-            public Boolean igual(String a, String b) {
-                if (a.equals(b)) {
-                    return true;
-                } else {
-                    return false;
-                }
 
-            }
         });
         btnCad.setFont(new Font("Tahoma", Font.BOLD, 12));
         btnCad.setForeground(new Color(255, 255, 255));
