@@ -20,7 +20,7 @@ public class banc {
     }
     public boolean existe(String a) {
         int b = 0;
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < count; i++) {
             if (a.equals(banco[i][0])) {
                 b++;
             }
